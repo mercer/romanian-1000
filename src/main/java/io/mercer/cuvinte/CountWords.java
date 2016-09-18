@@ -22,6 +22,7 @@ public class CountWords {
             "iorga-adevarul-asupra-trecutului-si-prezentului-basarabiei.txt",
             "ispirescu-basme.txt",
             "slavici-moara-cu-noroc.txt",
+            "zamfirescu-viata-la-tara.txt",
     };
 
     public static void main(String[] args) throws IOException {
@@ -42,7 +43,7 @@ public class CountWords {
                 .limit(1000)
                 .collect(toList());
 
-        Files.write(Paths.get("build/output.txt"), top, Charset.forName("UTF-8"));
+        Files.write(Paths.get("results/toti-autorii-impreuna.txt"), top, Charset.forName("UTF-8"));
     }
 
     private static Scanner toScanner(String s) {

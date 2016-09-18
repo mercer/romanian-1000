@@ -1,5 +1,6 @@
-corect:
-că când în şi Şi ţi Înspre
-
 incorect:
-și Și
+Șș
+
+corect:
+ăâÎîŞşţ
+
