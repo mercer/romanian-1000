@@ -31,6 +31,7 @@ public class CountWords {
             "istrati-ciulinii-baraganului.txt",
             "odobescu-doamna-chiajna.txt",
             "rebreanu-ion.txt",
+            "rebreanu-padurea-spanzuratilor.txt",
             "slavici-moara-cu-noroc.txt",
             "zamfirescu-viata-la-tara.txt",
     };
