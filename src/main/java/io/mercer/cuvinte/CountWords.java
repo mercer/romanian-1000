@@ -18,11 +18,12 @@ public class CountWords {
         // https://stackoverflow.com/questions/13979317/how-to-count-the-number-of-occurrences-of-words-in-a-text
 
         InputStream in = CountWords.class.getClassLoader().getResourceAsStream("pg35323.txt");
-        Scanner file = new Scanner(in).useDelimiter("[^a-zA-Z]+");
+        Scanner file = new Scanner(in, "UTF-8").useDelimiter("[^a-zA-Z]+");
 
         List<String> words = new ArrayList<>();
         while (file.hasNext()) {
-            words.add(file.next().toLowerCase());
+            String next = file.next();
+            words.add(next.toLowerCase());
         }
 
         Map<String, Integer> frequencyMap = words.stream()
@@ -37,7 +38,7 @@ public class CountWords {
                 .limit(1000)
                 .collect(toList());
 
-        for (String key:top) {
+        for (String key : top) {
             System.out.println("key: " + key + "\t\tvalue: " + frequencyMap.get(key));
         }
     }
