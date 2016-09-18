@@ -30,6 +30,7 @@ public class CountWords {
             "ispirescu-basme.txt",
             "istrati-ciulinii-baraganului.txt",
             "odobescu-doamna-chiajna.txt",
+            "rebreanu-adam-si-eva.txt",
             "rebreanu-ion.txt",
             "rebreanu-padurea-spanzuratilor.txt",
             "slavici-moara-cu-noroc.txt",
