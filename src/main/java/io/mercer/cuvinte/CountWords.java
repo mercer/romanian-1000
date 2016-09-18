@@ -53,10 +53,6 @@ public class CountWords {
                 .collect(toList());
 
         Files.write(Paths.get("results/toti-autorii-impreuna.txt"), top, Charset.forName("UTF-8"));
-
-        for (String key : top) {
-            System.out.println(key + " : " + frequencyMap.get(key));
-        }
     }
 
     private static Scanner toScanner(String s) {
