@@ -1,5 +1,5 @@
 incorect:
-Șș
+Șșț
 
 corect:
 ăâÎîŞşţ
