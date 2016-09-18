@@ -16,3 +16,6 @@
 - http://manybooks.net/language.php?code=ro
 - http://www.ulib.org/
 - http://elefant.ro/
+
+# unelte
+- http://www.fontspace.com/unicode/analyzer/?q=%C8%99i+%C5%9Fi

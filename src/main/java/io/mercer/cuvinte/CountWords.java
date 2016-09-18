@@ -16,8 +16,7 @@ public class CountWords {
     private static final String[] FILES = {
             "creanga-amintiri-din-copilarie.txt",
             "iorga-adevarul-asupra-trecutului-si-prezentului-basarabiei.txt",
-//            "special-characters-test.txt",
-//            "eminescu-poezii.txt",
+            "eminescu-poesii.txt",
     };
 
     public static void main(String[] args) throws IOException {
