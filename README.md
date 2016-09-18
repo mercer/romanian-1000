@@ -15,3 +15,4 @@
 - http://www.rarebookroom.org/
 - http://manybooks.net/language.php?code=ro
 - http://www.ulib.org/
+- http://elefant.ro/
