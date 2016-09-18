@@ -14,9 +14,14 @@ import static java.util.stream.Collectors.toMap;
 public class CountWords {
 
     private static final String[] FILES = {
+            "caragiale-momente-si-schite.txt",
             "creanga-amintiri-din-copilarie.txt",
-            "iorga-adevarul-asupra-trecutului-si-prezentului-basarabiei.txt",
+            "creanga-povesti.txt",
+            "eminescu-geniu-pustiu.txt",
             "eminescu-poesii.txt",
+            "iorga-adevarul-asupra-trecutului-si-prezentului-basarabiei.txt",
+            "ispirescu-basme.txt",
+            "slavici-moara-cu-noroc.txt",
     };
 
     public static void main(String[] args) throws IOException {

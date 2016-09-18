@@ -1,2 +1,5 @@
-că când în şi ţi
-Înspre
+corect:
+că când în şi Şi ţi Înspre
+
+incorect:
+și Și
