@@ -5,6 +5,7 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.regex.Pattern;
 
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
@@ -13,10 +14,10 @@ import static java.util.stream.Collectors.toMap;
 public class CountWords {
 
     private static final String[] FILES = {
+            "creanga-amintiri-din-copilarie.txt",
+            "iorga-adevarul-asupra-trecutului-si-prezentului-basarabiei.txt",
+//            "special-characters-test.txt",
 //            "eminescu-poezii.txt",
-//            "creanga-amintiri-din-copilarie.txt",
-//            "iorga-adevarul-asupra-trecutului-si-prezentului-basarabiei.txt",
-            "special-characters-test.txt",
     };
 
     public static void main(String[] args) throws IOException {
@@ -43,7 +44,7 @@ public class CountWords {
     private static Scanner toScanner(String s) {
         return new Scanner(CountWords.class.getClassLoader().getResourceAsStream(s), "UTF-8")
                 .useLocale(new Locale("ro", "RO"))
-                .useDelimiter("[^a-zA-Z]+");
+                .useDelimiter(Pattern.compile("[^\\p{L}]+", Pattern.UNICODE_CHARACTER_CLASS & Pattern.UNICODE_CASE));
     }
 
     private static List<String> scanWords(Scanner file) {
