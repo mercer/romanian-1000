@@ -22,6 +22,7 @@ public class CountWords {
             "creanga-povesti.txt",
             "eminescu-geniu-pustiu.txt",
             "eminescu-poesii.txt",
+            "eminescu-scrisori.txt",
             "iorga-adevarul-asupra-trecutului-si-prezentului-basarabiei.txt",
             "ispirescu-basme.txt",
             "slavici-moara-cu-noroc.txt",
