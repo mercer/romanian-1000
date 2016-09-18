@@ -1,7 +1,6 @@
 package io.mercer.cuvinte;
 
 import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -12,18 +11,17 @@ import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toMap;
 
 public class CountWords {
+
+    private static final String[] FILES = {
+        "eminescu-poezii.txt",
+        "creanga-amintiri-din-copilarie.txt",
+        "iorga-adevarul-asupra-trecutului-si-prezentului-basarabiei.txt",
+    };
+
     public static void main(String[] args) throws FileNotFoundException {
-
-        // from
-        // https://stackoverflow.com/questions/13979317/how-to-count-the-number-of-occurrences-of-words-in-a-text
-
-        InputStream in = CountWords.class.getClassLoader().getResourceAsStream("pg35323.txt");
-        Scanner file = new Scanner(in, "UTF-8").useDelimiter("[^a-zA-Z]+");
-
         List<String> words = new ArrayList<>();
-        while (file.hasNext()) {
-            String next = file.next();
-            words.add(next.toLowerCase());
+        for (String file : FILES) {
+            words.addAll(scanWords(toScanner(file)));
         }
 
         Map<String, Integer> frequencyMap = words.stream()
@@ -39,7 +37,20 @@ public class CountWords {
                 .collect(toList());
 
         for (String key : top) {
-            System.out.println("key: " + key + "\t\tvalue: " + frequencyMap.get(key));
+            System.out.println(key);
         }
+    }
+
+    private static Scanner toScanner(String s) {
+        return new Scanner(CountWords.class.getClassLoader().getResourceAsStream(s), "UTF-8").useDelimiter("[^a-zA-Z]+");
+    }
+
+    private static List<String> scanWords(Scanner file) {
+        List<String> words = new ArrayList<>();
+        while (file.hasNext()) {
+            String next = file.next();
+            words.add(next.toLowerCase());
+        }
+        return words;
     }
 }
