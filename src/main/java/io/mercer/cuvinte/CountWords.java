@@ -26,6 +26,8 @@ public class CountWords {
             "eminescu-scrisori.txt",
             "iorga-adevarul-asupra-trecutului-si-prezentului-basarabiei.txt",
             "ispirescu-basme.txt",
+            "istrati-ciulinii-baraganului.txt",
+            "odobescu-doamna-chiajna.txt",
             "slavici-moara-cu-noroc.txt",
             "zamfirescu-viata-la-tara.txt",
     };
