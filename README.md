@@ -2,6 +2,7 @@
 - https://cartibunegratis.blogspot.gr/p/catalog-de-carti-gratuite-in-romana.html
 - https://ro.wikisource.org/wiki/Pagina_principal%C4%83
 - https://www.gutenberg.org/browse/languages/ro
+- https://archive.org/stream/BibliaOrtodoxaSfantaScripturaEpub/biblia-ortodoxa-sfanta-scriptura-epub_djvu.txt
 
 # alte linkuri
 - https://dexonline.ro/cuvinte-aleatoare

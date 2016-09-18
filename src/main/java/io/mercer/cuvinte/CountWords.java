@@ -18,6 +18,7 @@ public class CountWords {
             "balzac-eugenie-grandet.txt",
             "bart-jurnal-de-bord.txt",
             "basme-culte-si-populare.txt",
+            "biblia.txt",
             "caragiale-momente-si-schite.txt",
             "caragiale-teatru.txt",
             "creanga-amintiri-din-copilarie.txt",
@@ -52,6 +53,10 @@ public class CountWords {
                 .collect(toList());
 
         Files.write(Paths.get("results/toti-autorii-impreuna.txt"), top, Charset.forName("UTF-8"));
+
+        for (String key : top) {
+            System.out.println(key + " : " + frequencyMap.get(key));
+        }
     }
 
     private static Scanner toScanner(String s) {
