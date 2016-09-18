@@ -15,6 +15,7 @@ public class CountWords {
 
     private static final String[] FILES = {
             "alecsandri-chirita.txt",
+            "balzac-eugenie-grandet.txt",
             "basme-culte-si-populare.txt",
             "caragiale-momente-si-schite.txt",
             "caragiale-teatru.txt",
