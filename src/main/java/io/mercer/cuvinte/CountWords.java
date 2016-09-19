@@ -51,13 +51,15 @@ public class CountWords {
                         s -> 1,
                         Integer::sum));
 
-        List<String> top = words.stream()
+        List<String> lines = words.stream()
                 .sorted(comparing(frequencyMap::get).reversed())
                 .distinct()
                 .limit(1000)
+                .map(s -> Word.word(s, frequencyMap.get(s)))
+                .map(Word::toCsvLine)
                 .collect(toList());
 
-        Files.write(Paths.get("results/toti-autorii-impreuna.txt"), top, Charset.forName("UTF-8"));
+        Files.write(Paths.get("results/toti-autorii-impreuna.csv"), lines, Charset.forName("UTF-8"));
     }
 
     private static Scanner toScanner(String s) {
@@ -73,5 +75,23 @@ public class CountWords {
             words.add(next.toLowerCase());
         }
         return words;
+    }
+
+    private static class Word {
+        private String word;
+        private Integer count;
+
+        private Word(String word, Integer count) {
+            this.word = word;
+            this.count = count;
+        }
+
+        static Word word(String word, Integer count) {
+            return new Word(word, count);
+        }
+
+        String toCsvLine() {
+            return word + "," + count;
+        }
     }
 }
